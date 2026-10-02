@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Clock, Layers, LayoutGrid, Coffee, AlertCircle, Edit3, Check, Save, FileCode } from 'lucide-react';
+import { Calendar, Clock, Edit3, FileCode } from 'lucide-react';
 import { TournamentSettings, CategoryConfig, LabelsConfig } from '../types';
 import { formatDurationGerman } from '../utils/scheduler';
 
@@ -59,10 +59,6 @@ export const MetricsBar: React.FC<MetricsBarProps> = ({
                 <FileCode className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
                 <span>tournament_config.json</span>
               </button>
-              <div className="inline-flex items-center gap-1 text-[11px] text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded-md border border-emerald-200 dark:border-emerald-800/80 font-medium">
-                <Check className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
-                <span>Gespeichert</span>
-              </div>
             </div>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
               {settings.pitchName} · 8 {cat1Code}- & 8 {cat2Code}-Teams

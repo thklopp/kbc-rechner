@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shuffle, RotateCcw, ArrowLeftRight, Check, Sparkles } from 'lucide-react';
+import { Shuffle, RotateCcw, ArrowLeftRight, Sparkles } from 'lucide-react';
 import { Team, Category } from '../types';
 import { DEFAULT_TEAMS, NEUTRAL_TEAMS } from '../utils/defaultData';
 
@@ -13,18 +13,11 @@ export const TeamManagement: React.FC<TeamManagementProps> = ({
   onUpdateTeams,
 }) => {
   const [activeCategory, setActiveCategory] = React.useState<Category>('maedchen');
-  const [saveStatus, setSaveStatus] = React.useState<string | null>(null);
 
   const handleNameChange = (teamId: string, newName: string) => {
     onUpdateTeams(
       teams.map(t => (t.id === teamId ? { ...t, name: newName } : t))
     );
-    setSaveStatus('Gespeichert');
-  };
-
-  const handleManualSave = () => {
-    setSaveStatus('Gespeichert!');
-    setTimeout(() => setSaveStatus(null), 3000);
   };
 
   const handleSwitchGroup = (teamId: string) => {
@@ -108,14 +101,6 @@ export const TeamManagement: React.FC<TeamManagementProps> = ({
 
         {/* Quick actions buttons */}
         <div className="flex flex-wrap items-center gap-2">
-          <button
-            onClick={handleManualSave}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-emerald-800 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-800/80 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 rounded-lg transition-colors shadow-xs"
-            title="Aktuellen Stand speichern"
-          >
-            <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>{saveStatus || 'Automatisch gespeichert'}</span>
-          </button>
           <button
             onClick={handleShuffle}
             className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-lg transition-colors shadow-xs"

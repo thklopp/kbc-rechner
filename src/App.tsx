@@ -13,7 +13,7 @@ import { PrintScheduleView } from './components/PrintScheduleView';
 import { MobileBottomNav } from './components/MobileBottomNav';
 import { DEFAULT_SETTINGS, DEFAULT_TEAMS, DEFAULT_CONFIG } from './utils/defaultData';
 import { generateFullSchedule } from './utils/scheduler';
-import { TournamentSettings, Team, Category, TournamentProject, MatchOverride, TournamentConfigFile } from './types';
+import { TournamentSettings, Team, Category, MatchOverride, TournamentConfigFile } from './types';
 
 const SETTINGS_STORAGE_KEY = 'hockey_tournament_settings_v1';
 const TEAMS_STORAGE_KEY = 'hockey_tournament_teams_v1';
@@ -261,12 +261,6 @@ export default function App() {
     }, 150);
   };
 
-  const handleImportProject = (project: TournamentProject) => {
-    if (project.settings) setSettings(project.settings);
-    if (project.teams) setTeams(project.teams);
-    if (project.matchOverrides) setMatchOverrides(project.matchOverrides);
-  };
-
   if (isPrintView) {
     return (
       <PrintScheduleView
@@ -351,7 +345,7 @@ export default function App() {
       <footer className="hidden md:block bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-4 text-center text-xs text-slate-500 dark:text-slate-400 transition-colors">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <span>
-            {settings.tournamentName} · 1 Spielfeld ({settings.pitchName}) · Automatische Browser-Speicherung aktiv
+            {settings.tournamentName} · 1 Spielfeld ({settings.pitchName})
           </span>
           <span className="font-mono text-[11px] text-slate-400 dark:text-slate-500">
             {config.labels?.blockPacingNotice || '2er-Block-Taktung'}: {config.labels?.blockRotationNotice || `2× ${config.categories?.cat1.code || 'wU14'} ↔ 2× ${config.categories?.cat2.code || 'mU14'} im Wechsel`}
@@ -380,8 +374,6 @@ export default function App() {
         stats={stats}
         settings={settings}
         teams={teams}
-        matchOverrides={matchOverrides}
-        onImportProject={handleImportProject}
         onPrint={handlePrint}
       />
 
