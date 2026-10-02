@@ -1,0 +1,6 @@
+{
+  "name": "Hockey-Turnierrechner & Spielplaner (KBC)",
+  "description": "Präziser Spielplan- und Zeiteinteilungsrechner für 2-tägige Hockeyturniere mit Einzelplatz, 2er-Block-Wechsel und persistentem Volume-Speicher.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

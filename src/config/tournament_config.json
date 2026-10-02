@@ -1,0 +1,124 @@
+{
+  "version": "1.0",
+  "meta": {
+    "title": "KBC-Rechner",
+    "description": "Konfigurationsdatei für den KBC Hockey-Turnierrechner. Enthält alle anpassbaren Texte, Zahlen, Zeiten, Kategorien und Teams.",
+    "updatedAt": "2026-10-02T14:25:00Z",
+    "author": "KBC Orga-Team"
+  },
+  "tournament": {
+    "tournamentName": "KBC-Rechner",
+    "pitchName": "Halle",
+    "saturdayStartTime": "10:00",
+    "sundayStartTime": "09:00",
+    "matchDurationMinutes": 20,
+    "breakDurationMinutes": 5,
+    "saturdayLunchEnabled": false,
+    "saturdayLunchAfterMatch": 12,
+    "saturdayLunchDurationMinutes": 30,
+    "sundayLunchEnabled": false,
+    "sundayLunchAfterMatch": 8,
+    "sundayLunchDurationMinutes": 30,
+    "ceremonyBufferMinutes": 15,
+    "sundayFormat": "full_16"
+  },
+  "rules": {
+    "teamsPerGroup": 4,
+    "groupCount": 2,
+    "matchesPerBlock": 2,
+    "minRestMinutes": 75,
+    "pointsForWin": 3,
+    "pointsForDraw": 1,
+    "pointsForLoss": 0
+  },
+  "categories": {
+    "cat1": {
+      "id": "maedchen",
+      "code": "wU14",
+      "name": "wU14",
+      "emoji": "👧",
+      "description": "Weibliche Jugend U14"
+    },
+    "cat2": {
+      "id": "jungs",
+      "code": "mU14",
+      "name": "mU14",
+      "emoji": "👦",
+      "description": "Männliche Jugend U14"
+    }
+  },
+  "labels": {
+    "groupA": "Gruppe A",
+    "groupB": "Gruppe B",
+    "semiFinalChampionship1": "Halbfinale 1 (HF 1)",
+    "semiFinalChampionship2": "Halbfinale 2 (HF 2)",
+    "semiFinalPlacement1": "Halbfinale Plätze 5–8 (HF-T1)",
+    "semiFinalPlacement2": "Halbfinale Plätze 5–8 (HF-T2)",
+    "matchForPlace7": "Spiel um Platz 7",
+    "matchForPlace5": "Spiel um Platz 5",
+    "matchForPlace3": "Spiel um Platz 3 (Kleines Finale)",
+    "grandFinal": "Großes Finale (Platz 1)",
+    "ceremony": "Siegerehrung",
+    "lunchNotice": "Mittagspause",
+    "blockPacingNotice": "2er-Block-Taktung",
+    "saturdayTitle": "Samstag",
+    "sundayTitle": "Sonntag",
+    "blockRotationNotice": "2× wU14 ↔ 2× mU14 im Wechsel",
+    "restTimeNotice": "mind. 75m Pause"
+  },
+  "uiTexts": {
+    "tabSchedule": "Spielansetzungen",
+    "tabGroups": "Gruppen-Übersicht",
+    "tabSundayBracket": "Sonntags-Finalrunden",
+    "tabTeamSchedule": "Team-Fahrpläne",
+    "tabTeams": "Teams & Gruppen",
+    "btnSettings": "Einstellungen",
+    "btnExport": "Export",
+    "btnJson": "JSON-Konfiguration",
+    "btnPrint": "Drucken",
+    "allDays": "Beide Tage",
+    "allCategories": "Alle Kategorien"
+  },
+  "teams": [
+    { "id": "m-a1", "name": "Rot-Weiss Köln", "category": "maedchen", "group": "A", "seed": 1 },
+    { "id": "m-a2", "name": "Berliner HC", "category": "maedchen", "group": "A", "seed": 2 },
+    { "id": "m-a3", "name": "Harvestehuder THC", "category": "maedchen", "group": "A", "seed": 3 },
+    { "id": "m-a4", "name": "Club an der Alster", "category": "maedchen", "group": "A", "seed": 4 },
+
+    { "id": "m-b1", "name": "Düsseldorfer HC", "category": "maedchen", "group": "B", "seed": 1 },
+    { "id": "m-b2", "name": "Mannheimer HC", "category": "maedchen", "group": "B", "seed": 2 },
+    { "id": "m-b3", "name": "HTC Uhlenhorst Mülheim", "category": "maedchen", "group": "B", "seed": 3 },
+    { "id": "m-b4", "name": "UHC Hamburg", "category": "maedchen", "group": "B", "seed": 4 },
+
+    { "id": "j-a1", "name": "HTC Uhlenhorst Mülheim", "category": "jungs", "group": "A", "seed": 1 },
+    { "id": "j-a2", "name": "Rot-Weiss Köln", "category": "jungs", "group": "A", "seed": 2 },
+    { "id": "j-a3", "name": "Mannheimer HC", "category": "jungs", "group": "A", "seed": 3 },
+    { "id": "j-a4", "name": "Münchner SC", "category": "jungs", "group": "A", "seed": 4 },
+
+    { "id": "j-b1", "name": "Harvestehuder THC", "category": "jungs", "group": "B", "seed": 1 },
+    { "id": "j-b2", "name": "Berliner HC", "category": "jungs", "group": "B", "seed": 2 },
+    { "id": "j-b3", "name": "Club an der Alster", "category": "jungs", "group": "B", "seed": 3 },
+    { "id": "j-b4", "name": "Düsseldorfer HC", "category": "jungs", "group": "B", "seed": 4 }
+  ],
+  "neutralTeams": [
+    { "id": "m-a1", "name": "wU14 Team 1", "category": "maedchen", "group": "A", "seed": 1 },
+    { "id": "m-a2", "name": "wU14 Team 2", "category": "maedchen", "group": "A", "seed": 2 },
+    { "id": "m-a3", "name": "wU14 Team 3", "category": "maedchen", "group": "A", "seed": 3 },
+    { "id": "m-a4", "name": "wU14 Team 4", "category": "maedchen", "group": "A", "seed": 4 },
+
+    { "id": "m-b1", "name": "wU14 Team 5", "category": "maedchen", "group": "B", "seed": 1 },
+    { "id": "m-b2", "name": "wU14 Team 6", "category": "maedchen", "group": "B", "seed": 2 },
+    { "id": "m-b3", "name": "wU14 Team 7", "category": "maedchen", "group": "B", "seed": 3 },
+    { "id": "m-b4", "name": "wU14 Team 8", "category": "maedchen", "group": "B", "seed": 4 },
+
+    { "id": "j-a1", "name": "mU14 Team 1", "category": "jungs", "group": "A", "seed": 1 },
+    { "id": "j-a2", "name": "mU14 Team 2", "category": "jungs", "group": "A", "seed": 2 },
+    { "id": "j-a3", "name": "mU14 Team 3", "category": "jungs", "group": "A", "seed": 3 },
+    { "id": "j-a4", "name": "mU14 Team 4", "category": "jungs", "group": "A", "seed": 4 },
+
+    { "id": "j-b1", "name": "mU14 Team 5", "category": "jungs", "group": "B", "seed": 1 },
+    { "id": "j-b2", "name": "mU14 Team 6", "category": "jungs", "group": "B", "seed": 2 },
+    { "id": "j-b3", "name": "mU14 Team 7", "category": "jungs", "group": "B", "seed": 3 },
+    { "id": "j-b4", "name": "mU14 Team 8", "category": "jungs", "group": "B", "seed": 4 }
+  ]
+}
