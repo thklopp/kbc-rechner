@@ -3,7 +3,6 @@ import { Printer, Download, Share2, Settings, Shield, Sun, Moon, FileCode } from
 import { UiTextsConfig } from '../types';
 
 interface HeaderProps {
-  title?: string;
   uiTexts?: UiTextsConfig;
   activeTab: 'schedule' | 'groups' | 'team_itinerary' | 'sunday_bracket' | 'teams_config';
   onSelectTab: (tab: 'schedule' | 'groups' | 'team_itinerary' | 'sunday_bracket' | 'teams_config') => void;
@@ -16,7 +15,6 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({
-  title = 'KBC-Rechner',
   uiTexts,
   activeTab,
   onSelectTab,
@@ -31,16 +29,13 @@ export const Header: React.FC<HeaderProps> = ({
     <header className="sticky top-0 z-30 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Zone 1: Single text element wordmark */}
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-slate-900 dark:bg-white text-white dark:text-slate-950 flex items-center justify-center font-bold text-xs tracking-wider shadow-sm transition-colors">
-              KBC
-            </div>
-            <div>
-              <span className="text-base sm:text-lg font-bold tracking-tight text-slate-900 dark:text-white">
-                {title}
-              </span>
-            </div>
+          {/* Zone 1: Logo */}
+          <div className="flex items-center">
+            <img
+              src="/favicon.png"
+              alt="Logo"
+              className="h-10 w-auto object-contain transition-transform hover:scale-105"
+            />
           </div>
 
           {/* Zone 2: Navigation Links / Segmented Tabs */}
